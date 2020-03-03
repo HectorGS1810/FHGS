@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recomendación de peliculas</title>
+<style type="text/css">
+body {
+  background-color: grey ;
+  text-align: center;
+  color: #000000;
+}
+.abc {
+	font-family: Times New Roman, Times, serif;
+}
+.ac {
+	font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body> 
+<main>
+<h1 class="abc">Recomendación de peliculas</h1>
+<h3 class="ac">Ingresa el numero de tu genero de peliculas favorito: 1.- Terror 2.- Accion 3.- Comedia</h3>
+<form action="javascript:cod();">
+        <p>
+          <input id="genero" type="number"
+            min="0" max="3" required>
+          <label for="genero"></label>
+        </p>
+    <p><button id="submit">Enviar</button></p>
+      </form>
+<script>
+function cod(){
+	const pel = genero.valueAsNumber;
+if (pel == 1){
+	alert("Las recomendaciones son: \n IT (1990) \n El Resplandor \n La bruja de Blair");
+} else if(pel == 2){
+	alert("Las recomendaciones son: \n Terminator \n Kill Bill \n Rambo");
+} else if(pel == 3){
+	alert ("Las recomendaciones son: \n TED \n Son como niños \n El Dictador");
+}
+}
+</script>
+</main>
+<footer>Gasca Salazar Hector.</footer>
+</body>
+</html>
