@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Recomendación de peliculas</title>
-<style type="text/css">
-body {
-  background-color: grey ;
-  text-align: center;
-  color: #000000;
-}
-.abc {
-	font-family: Times New Roman, Times, serif;
-}
-.ac {
-	font-family: Arial, Helvetica, sans-serif;
-}
-</style>
+    <title> Recomendacion de peliculas </title>
+    <link rel="stylesheet" href="HdE.css">
+    <style type="text/css">
+    </style>
 </head>
 
-<body> 
-<main>
-<h1 class="abc">Recomendación de peliculas</h1>
-<h3 class="ac">Ingresa el numero de tu genero de peliculas favorito: 1.- Terror 2.- Accion 3.- Comedia</h3>
-<form action="javascript:cod();">
+<body>
+    <main>
+        <h1 class="titulo">Recomendacion de peliculas</h1>
+        <h3 class="cuerpo">
+            <h1>Ingresa tu edad</h1>
+        </h3>
         <p>
-          <input id="genero" type="number"
-            min="0" max="3" required>
-          <label for="genero"></label>
+
+            <input id="edad" type="number" required>
+            <label for="ed"></label>
+            <br>
         </p>
-    <p><button id="submit">Enviar</button></p>
-      </form>
-<script>
-function cod(){
-	const pel = genero.valueAsNumber;
-if (pel == 1){
-	alert("Las recomendaciones son: \n IT (1990) \n El Resplandor \n La bruja de Blair");
-} else if(pel == 2){
-	alert("Las recomendaciones son: \n Terminator \n Kill Bill \n Rambo");
-} else if(pel == 3){
-	alert ("Las recomendaciones son: \n TED \n Son como niños \n El Dictador");
-}
-}
-</script>
-</main>
-<footer>Gasca Salazar Hector.</footer>
+
+
+
+        <h3 class="cuerpo">
+            <h1>Ingresa una categoria</h1>
+            <h2>1.- Terror<br>2.- Slasher<br>3.- Accion</h2>
+        </h3>
+        <form action="javascript:ejecutar();">
+            <p>
+                <input id="cat" type="number">
+                <label for="cat"></label>
+            </p>
+            <p><button id="submit">
+                    <h1 align="center" class="boton">Enviar</h1>
+          </button></p>
+        </form>
+        <script>
+            function ejecutar() {
+                const eda = edad.valueAsNumber;
+                const gen = cat.valueAsNumber;
+				
+			if(eda >= 15){
+				switch(gen){
+					case 1:
+					alert("Las recomendaciones son: \nEl resplandor\nLa bruja de blair\nIT");
+					break;
+					case 2: 
+					alert("Las recomendaciones son: \nLa masacre en Texas\nFreddy Krueger vs Jason\nScream");
+					break;
+					case 3: 
+					alert("Las recomendaciones son: \nKill Bill\nRambo\nTerminator");
+					break;
+					default:
+					alert("Genero equivocado");
+					}
+				}
+			else if(eda < 15){
+				switch(gen){
+					case 1:
+					alert("No se recomienda ver peliculas de terror");
+					break;
+					case 2: 
+					alert("No se recomienda ver peliculas slasher");
+					break;
+					case 3: 
+					alert("Las recomendaciones son: \nAvengers\nBlack Panther\nSpiderman");
+					break;
+					default:
+					alert("Genero equivocado");
+					}
+				}
+			}
+        </script>
+    </main>
+    <footer class="piepag">Gasca Salazar Hector IC-41M</footer>
 </body>
+
 </html>
